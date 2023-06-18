@@ -74,7 +74,7 @@ const addLoading = () => {
     button.innerHTML = '<img src="./img/loading.png" class="loading" alt="">'
 }
 const removeLoading = () => {
-    button.innerHTML = 'Obrigado!'
+    button.innerHTML = 'Obrigada!'
 }
 
 
