@@ -294,8 +294,29 @@ span {
 }
 
 .contact form .btn {
+    width: 50%;
+    height: 50px;
     margin-top: 2rem;
     cursor: pointer;
+}
+
+.loading{
+    width: 6rem;
+    margin-top: -1rem;
+    animation: spin 1500ms infinite linear;
+
+}
+
+@keyframes spin {
+
+    form {
+        transform: rotate(0deg);
+    } 
+
+    to {
+        transform: rotate(360deg);
+    }
+
 }
 
 .footer {

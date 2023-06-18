@@ -67,10 +67,21 @@ const typed = new Typed('.multiple-text', {
 })
 
 /*============= capture form =============*/
+const button = document.querySelector('#btn-form')
+
+const addLoading = () => {
+   
+    button.innerHTML = '<img src="./img/loading.png" class="loading" alt="">'
+}
+const removeLoading = () => {
+    button.innerHTML = 'Obrigado!'
+}
+
+
 
 const handleSubmit = (event) => {
     event.preventDefault();
-
+    addLoading();
     const name = document.querySelector('input[name=nome]').value
     const numero = document.querySelector('input[name=numero]').value
     const email = document.querySelector('input[name=email]').value
@@ -82,7 +93,7 @@ const handleSubmit = (event) => {
             'Content-Type': 'application/json',
         }, 
         body: JSON.stringify({name: name, email: email, numero: numero}),
-   });
+   }).then(() => removeLoading());
 }
 
 
